@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="APL_site.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="title" runat="server"></asp:ContentPlaceHolder>
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="Style.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class = "wrapper">
+
+    <!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-deep-purple w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-black w3-large w3-deep-purple" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="Default.aspx" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+  
+	<!--- submenu --->
+	<div class="dropdown">
+    <button class="dropbtn">Tools
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="Tracking.php">Tracking PO</a>
+      <a href="Part_type.aspx">Parts Specs</a>  
+	  <a href="Inventory.aspx">Inventory</a>
+	
+    </div>
+  </div>
+	
+    <a href="WebForm1.aspx" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black">Assemblies</a>
+  </div> 
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <br><br>
+   
+    <a href="WebForm1.aspx" class="w3-bar-item w3-button w3-padding-large">Standards</a>
+  </div>
+
+
+           <div class ="content">
+             <asp:ContentPlaceHolder ID="contentBody" runat="server">
+
+             </asp:ContentPlaceHolder>
+           </div>
+
+        </div>
+    </form>
+</body>
+</html>

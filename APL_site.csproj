@@ -1,0 +1,824 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EE16F1A3-E9F5-4366-9282-F990E56D962C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>APL_site</RootNamespace>
+    <AssemblyName>APL_site</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=8.0.15.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 8.0.15\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BOM.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Grid_v.css" />
+    <Content Include="Images\ada.jpg" />
+    <Content Include="Images\APL_ele.JPG" />
+    <Content Include="Images\APL_ele.png" />
+    <Content Include="Images\binocular.png" />
+    <Content Include="Images\Default_package.jpg" />
+    <Content Include="Images\Enginnerring.png" />
+    <Content Include="Images\inven_icon.png" />
+    <Content Include="Images\manuf.png" />
+    <Content Include="Images\No_pic.jpg" />
+    <Content Include="Images\P1.jpg" />
+    <Content Include="Images\P2.jpg" />
+    <Content Include="Images\P3.jpg" />
+    <Content Include="Images\P4.jpg" />
+    <Content Include="Images\PadLock.png" />
+    <Content Include="Images\Parts_s.mp4" />
+    <Content Include="Images\PO_im.png" />
+    <Content Include="Images\proc.png" />
+    <Content Include="Images\schem.png" />
+    <Content Include="Images\settings.png" />
+    <Content Include="Images\Track.png" />
+    <Content Include="Images\Warehouse.jpg" />
+    <Content Include="Images\wareo.png" />
+    <Content Include="Inventory.aspx" />
+    <Content Include="Parts_Pictures\0162679.jpg" />
+    <Content Include="Parts_Pictures\0312001.HXP.JPG" />
+    <Content Include="Parts_Pictures\034125A04.JPG" />
+    <Content Include="Parts_Pictures\1017585.jpg" />
+    <Content Include="Parts_Pictures\1019318.jpg" />
+    <Content Include="Parts_Pictures\1042256.jpg" />
+    <Content Include="Parts_Pictures\1042259.jpg" />
+    <Content Include="Parts_Pictures\110120304.jpg" />
+    <Content Include="Parts_Pictures\11104714.jpg" />
+    <Content Include="Parts_Pictures\11122972.jpg" />
+    <Content Include="Parts_Pictures\1119931.jpg" />
+    <Content Include="Parts_Pictures\1128891.jpg" />
+    <Content Include="Parts_Pictures\1128948.jpg" />
+    <Content Include="Parts_Pictures\1133008.jpg" />
+    <Content Include="Parts_Pictures\1137341.jpg" />
+    <Content Include="Parts_Pictures\116TX.JPG" />
+    <Content Include="Parts_Pictures\12-4 VNTC   A11204-1M.jpg" />
+    <Content Include="Parts_Pictures\1212225- TSD M 3NM.JPG" />
+    <Content Include="Parts_Pictures\1212226- TSD M 6NM.JPG" />
+    <Content Include="Parts_Pictures\13521-972.jpg" />
+    <Content Include="Parts_Pictures\14-4 VNTC.jpg" />
+    <Content Include="Parts_Pictures\140G-G-DRA.JPG" />
+    <Content Include="Parts_Pictures\140G-G-RMB.JPG" />
+    <Content Include="Parts_Pictures\140G-G-TLC13.JPG" />
+    <Content Include="Parts_Pictures\140G-G6C3-C60-KA.JPG" />
+    <Content Include="Parts_Pictures\140G-I-MTL63.JPG" />
+    <Content Include="Parts_Pictures\140M-C-AFA11.JPG" />
+    <Content Include="Parts_Pictures\140M-C-AFC.JPG" />
+    <Content Include="Parts_Pictures\140M-C-KN1.JPG" />
+    <Content Include="Parts_Pictures\140M-C-W452N.JPG" />
+    <Content Include="Parts_Pictures\140M-C-W453N.JPG" />
+    <Content Include="Parts_Pictures\140M-C-W455N.JPG" />
+    <Content Include="Parts_Pictures\140M-C-WTEN.JPG" />
+    <Content Include="Parts_Pictures\140M-D8E-C20.JPG" />
+    <Content Include="Parts_Pictures\1485P-RDR5.JPG" />
+    <Content Include="Parts_Pictures\1489-AMRA3.JPG" />
+    <Content Include="Parts_Pictures\1489M1C060.JPG" />
+    <Content Include="Parts_Pictures\1492-A1B8.JPG" />
+    <Content Include="Parts_Pictures\1492-CJJ8-2.JPG" />
+    <Content Include="Parts_Pictures\1492-CJL8-2.JPG" />
+    <Content Include="Parts_Pictures\1492-CJLJ5-10.JPG" />
+    <Content Include="Parts_Pictures\1492-CJLJ5-2.JPG" />
+    <Content Include="Parts_Pictures\1492-CJLJ5-4.JPG" />
+    <Content Include="Parts_Pictures\1492-CJLJ6-10.JPG" />
+    <Content Include="Parts_Pictures\1492-DR6.JPG" />
+    <Content Include="Parts_Pictures\1492-EBJ3.JPG" />
+    <Content Include="Parts_Pictures\1492-J3.JPG" />
+    <Content Include="Parts_Pictures\1492-J6.JPG" />
+    <Content Include="Parts_Pictures\1492-JG4.JPG" />
+    <Content Include="Parts_Pictures\1492-MR8X12.JPG" />
+    <Content Include="Parts_Pictures\1492-N37.JPG" />
+    <Content Include="Parts_Pictures\1492-REC15.JPG" />
+    <Content Include="Parts_Pictures\1492-SP1B100.JPG" />
+    <Content Include="Parts_Pictures\1492-SPM1B070.JPG" />
+    <Content Include="Parts_Pictures\1492-WFB424.JPG" />
+    <Content Include="Parts_Pictures\1494F-P1.JPG" />
+    <Content Include="Parts_Pictures\1585D-M4DC-H.JPG" />
+    <Content Include="Parts_Pictures\1585D-M4TBJM-5.JPG" />
+    <Content Include="Parts_Pictures\1585D-M4TBJM-50.JPG" />
+    <Content Include="Parts_Pictures\1585D-M4TBJM-60.JPG" />
+    <Content Include="Parts_Pictures\16 BLUE MTW 500.JPG" />
+    <Content Include="Parts_Pictures\1606-XLS240E.JPG" />
+    <Content Include="Parts_Pictures\1606-XLS480EC.JPG" />
+    <Content Include="Parts_Pictures\1606-XLSRED40.JPG" />
+    <Content Include="Parts_Pictures\1732E-16CFGM12QCR.JPG" />
+    <Content Include="Parts_Pictures\1734-IA4.JPG" />
+    <Content Include="Parts_Pictures\1734-OW4.JPG" />
+    <Content Include="Parts_Pictures\1734-TOP.JPG" />
+    <Content Include="Parts_Pictures\1734-TOPS.JPG" />
+    <Content Include="Parts_Pictures\174845- Plug in Sensor.JPG" />
+    <Content Include="Parts_Pictures\1756-A10.jpg" />
+    <Content Include="Parts_Pictures\1756-A13.jpg" />
+    <Content Include="Parts_Pictures\1756-A17.jpg" />
+    <Content Include="Parts_Pictures\1756-A4.jpg" />
+    <Content Include="Parts_Pictures\1756-A7.jpg" />
+    <Content Include="Parts_Pictures\1756-BATM.JPG" />
+    <Content Include="Parts_Pictures\1756-CNB.jpg" />
+    <Content Include="Parts_Pictures\1756-CNBR.jpg" />
+    <Content Include="Parts_Pictures\1756-DNB.jpg" />
+    <Content Include="Parts_Pictures\1756-EN2T.jpg" />
+    <Content Include="Parts_Pictures\1756-EN2TR.JPG" />
+    <Content Include="Parts_Pictures\1756-ENBT.jpg" />
+    <Content Include="Parts_Pictures\1756-HSC.jpg" />
+    <Content Include="Parts_Pictures\1756-IB32.JPG" />
+    <Content Include="Parts_Pictures\1756-L55M12.jpg" />
+    <Content Include="Parts_Pictures\1756-L71.jpg" />
+    <Content Include="Parts_Pictures\1756-L72.jpg" />
+    <Content Include="Parts_Pictures\1756-L73.JPG" />
+    <Content Include="Parts_Pictures\1756-L73S.JPG" />
+    <Content Include="Parts_Pictures\1756-N2.jpg" />
+    <Content Include="Parts_Pictures\1756-PA75.JPG" />
+    <Content Include="Parts_Pictures\1756-PB72.jpg" />
+    <Content Include="Parts_Pictures\1756-PB75.jpg" />
+    <Content Include="Parts_Pictures\1756-TBCH.JPG" />
+    <Content Include="Parts_Pictures\1756-TBE.JPG" />
+    <Content Include="Parts_Pictures\1768-ENBT.JPG" />
+    <Content Include="Parts_Pictures\1768-EWEB.JPG" />
+    <Content Include="Parts_Pictures\1768-L45.JPG" />
+    <Content Include="Parts_Pictures\1769-ASCII.JPG" />
+    <Content Include="Parts_Pictures\1769-ECR.jpg" />
+    <Content Include="Parts_Pictures\1769-HSC.jpg" />
+    <Content Include="Parts_Pictures\1769-IA16.JPG" />
+    <Content Include="Parts_Pictures\1769-L16ER.jpg" />
+    <Content Include="Parts_Pictures\1769-L32C.jpg" />
+    <Content Include="Parts_Pictures\1769-L33ER.jpg" />
+    <Content Include="Parts_Pictures\1769-OF4VI.JPG" />
+    <Content Include="Parts_Pictures\1769-OW16.JPG" />
+    <Content Include="Parts_Pictures\1769-PA2.JPG" />
+    <Content Include="Parts_Pictures\1769-PB2.jpg" />
+    <Content Include="Parts_Pictures\1783-ETAP.JPG" />
+    <Content Include="Parts_Pictures\1786-TPR.jpg" />
+    <Content Include="Parts_Pictures\1786-XT.jpg" />
+    <Content Include="Parts_Pictures\194R-N60-1753-PBS1.JPG" />
+    <Content Include="Parts_Pictures\1A352.JPG" />
+    <Content Include="Parts_Pictures\1CPSA1A.jpg" />
+    <Content Include="Parts_Pictures\1CPSA1B.jpg" />
+    <Content Include="Parts_Pictures\1N4001-E3-73GICT-ND.JPG" />
+    <Content Include="Parts_Pictures\2022564.jpg" />
+    <Content Include="Parts_Pictures\2022996.jpg" />
+    <Content Include="Parts_Pictures\2034693.jpg" />
+    <Content Include="Parts_Pictures\2042800.jpg" />
+    <Content Include="Parts_Pictures\221-412.JPG" />
+    <Content Include="Parts_Pictures\22B-E1P7N104.jpg" />
+    <Content Include="Parts_Pictures\2508100.JPG" />
+    <Content Include="Parts_Pictures\2510KG1.JPG" />
+    <Content Include="Parts_Pictures\2891929.jpg" />
+    <Content Include="Parts_Pictures\2966799.JPG" />
+    <Content Include="Parts_Pictures\2CPSA1A1A.jpg" />
+    <Content Include="Parts_Pictures\2S1F.jpg" />
+    <Content Include="Parts_Pictures\3 black THHN 500.JPG" />
+    <Content Include="Parts_Pictures\3005947.jpg" />
+    <Content Include="Parts_Pictures\3005948 %28FBS 5-10%29.JPG" />
+    <Content Include="Parts_Pictures\3005948.jpg" />
+    <Content Include="Parts_Pictures\3030161.jpg" />
+    <Content Include="Parts_Pictures\3030187.jpg" />
+    <Content Include="Parts_Pictures\3030213.jpg" />
+    <Content Include="Parts_Pictures\3030271.JPG" />
+    <Content Include="Parts_Pictures\3030420.jpg" />
+    <Content Include="Parts_Pictures\3031270.jpg" />
+    <Content Include="Parts_Pictures\3044131.jpg" />
+    <Content Include="Parts_Pictures\3044160.jpg" />
+    <Content Include="Parts_Pictures\3044212.JPG" />
+    <Content Include="Parts_Pictures\3044380.jpg" />
+    <Content Include="Parts_Pictures\3048506 UK 10.3-HESILED N 690 2POL, 2-Pole Fuse Holder.JPG" />
+    <Content Include="Parts_Pictures\3048519.JPG" />
+    <Content Include="Parts_Pictures\313G %28O-RING%29.JPG" />
+    <Content Include="Parts_Pictures\3210567 %28PT 2.5%29.JPG" />
+    <Content Include="Parts_Pictures\3210567.jpg" />
+    <Content Include="Parts_Pictures\3211634.jpg" />
+    <Content Include="Parts_Pictures\3211757.jpg" />
+    <Content Include="Parts_Pictures\3211813.jpg" />
+    <Content Include="Parts_Pictures\3212044.jpg" />
+    <Content Include="Parts_Pictures\3212120.jpg" />
+    <Content Include="Parts_Pictures\3237124.JPG" />
+    <Content Include="Parts_Pictures\350-120-30.JPG" />
+    <Content Include="Parts_Pictures\3584B.jpg" />
+    <Content Include="Parts_Pictures\3801-DIN.JPG" />
+    <Content Include="Parts_Pictures\3837FN.jpg" />
+    <Content Include="Parts_Pictures\3HAC039431-001.JPG" />
+    <Content Include="Parts_Pictures\3LD2064-1GP53-0US2.jpg" />
+    <Content Include="Parts_Pictures\3SU1000-0AB10-0AA0.jpg" />
+    <Content Include="Parts_Pictures\3SU1000-0AB40-0AA0.jpg" />
+    <Content Include="Parts_Pictures\3SU1000-0AB50-0AA0.jpg" />
+    <Content Include="Parts_Pictures\3SU1000-0BB20-0AA0.jpg" />
+    <Content Include="Parts_Pictures\3SU1001-0AB50-0AA0.jpg" />
+    <Content Include="Parts_Pictures\3SU1001-0AB70-0AA0.jpg" />
+    <Content Include="Parts_Pictures\3SU1001-1HB20-0AA0.jpg" />
+    <Content Include="Parts_Pictures\3SU1030-4BC01-0AA0.jpg" />
+    <Content Include="Parts_Pictures\3SU1032-2BF60-0AA0.jpg" />
+    <Content Include="Parts_Pictures\3SU1400-2AA10-1BA0.jpg" />
+    <Content Include="Parts_Pictures\3SU1400-2AA10-1CA0.jpg" />
+    <Content Include="Parts_Pictures\3SU1401-2BB20-1AA0.jpg" />
+    <Content Include="Parts_Pictures\3SU1401-2BB30-1AA0.jpg" />
+    <Content Include="Parts_Pictures\3SU1401-2BB50-1AA0.jpg" />
+    <Content Include="Parts_Pictures\3SU1500-0AA10-0AA0.jpg" />
+    <Content Include="Parts_Pictures\3SU1801-0AA00-0AA2.jpg" />
+    <Content Include="Parts_Pictures\3SU1801-0AA00-0AB1.jpg" />
+    <Content Include="Parts_Pictures\3SU1801-0AA00-0AC2.jpg" />
+    <Content Include="Parts_Pictures\3SU1853-0AA00-0AB1.jpg" />
+    <Content Include="Parts_Pictures\3TA100G3K.jpg" />
+    <Content Include="Parts_Pictures\411-0051-000.JPG" />
+    <Content Include="Parts_Pictures\4140840.JPG" />
+    <Content Include="Parts_Pictures\418-TRH100A12002E126.JPG" />
+    <Content Include="Parts_Pictures\42EF-P2JBB-F4.jpg" />
+    <Content Include="Parts_Pictures\43352.jpg" />
+    <Content Include="Parts_Pictures\440P-MSLS11E.JPG" />
+    <Content Include="Parts_Pictures\450E - 024, Alarm Horn.JPG" />
+    <Content Include="Parts_Pictures\4P807.jpg" />
+    <Content Include="Parts_Pictures\4ZL01.JPG" />
+    <Content Include="Parts_Pictures\5604188.jpg" />
+    <Content Include="Parts_Pictures\5607021.jpg" />
+    <Content Include="Parts_Pictures\60-2649 Polarized Retroreflective Mounting Bracket.JPG" />
+    <Content Include="Parts_Pictures\6027048.jpg" />
+    <Content Include="Parts_Pictures\700-HK32A1.JPG" />
+    <Content Include="Parts_Pictures\700-HLS 1Z24.JPG" />
+    <Content Include="Parts_Pictures\700-P400A1.JPG" />
+    <Content Include="Parts_Pictures\7000-12021-2140100.jpg" />
+    <Content Include="Parts_Pictures\7000-40021-2240200.jpg" />
+    <Content Include="Parts_Pictures\7000-40021-2240500.jpg" />
+    <Content Include="Parts_Pictures\7000-40041-0150200.jpg" />
+    <Content Include="Parts_Pictures\7000-40581-2310500.JPG" />
+    <Content Include="Parts_Pictures\7000-40701-2130100.jpg" />
+    <Content Include="Parts_Pictures\7000-41861-0000000.jpg" />
+    <Content Include="Parts_Pictures\7000-48041-7172000.jpg" />
+    <Content Include="Parts_Pictures\700HC24A24-3-4.JPG" />
+    <Content Include="Parts_Pictures\7433010.jpg" />
+    <Content Include="Parts_Pictures\76000662.jpg" />
+    <Content Include="Parts_Pictures\7700-44511-S4U0500.JPG" />
+    <Content Include="Parts_Pictures\8000-88410-3620500.JPG" />
+    <Content Include="Parts_Pictures\8000-88510-3980500.JPG" />
+    <Content Include="Parts_Pictures\800886.jpg" />
+    <Content Include="Parts_Pictures\800D-A1D1,Non-illuminated Green Pushbutton.JPG" />
+    <Content Include="Parts_Pictures\800F-ALM.JPG" />
+    <Content Include="Parts_Pictures\800F-AML2.JPG" />
+    <Content Include="Parts_Pictures\800FM-F3.JPG" />
+    <Content Include="Parts_Pictures\800T-B6.JPG" />
+    <Content Include="Parts_Pictures\800T-H2A.JPG" />
+    <Content Include="Parts_Pictures\800T-H33A.JPG" />
+    <Content Include="Parts_Pictures\800T-N314.JPG" />
+    <Content Include="Parts_Pictures\800T-QAH2B.JPG" />
+    <Content Include="Parts_Pictures\800T-QBH2A.JPG" />
+    <Content Include="Parts_Pictures\800T-QBH2B.JPG" />
+    <Content Include="Parts_Pictures\800T-QH2A.JPG" />
+    <Content Include="Parts_Pictures\800T-QTH2A.JPG" />
+    <Content Include="Parts_Pictures\800T-X547.JPG" />
+    <Content Include="Parts_Pictures\800TQH2G.JPG" />
+    <Content Include="Parts_Pictures\807966 ADATA.jpg" />
+    <Content Include="Parts_Pictures\84318055.jpg" />
+    <Content Include="Parts_Pictures\84411855.jpg" />
+    <Content Include="Parts_Pictures\852-1106.JPG" />
+    <Content Include="Parts_Pictures\852-1112.JPG" />
+    <Content Include="Parts_Pictures\889N-F3AEA-6F.JPG" />
+    <Content Include="Parts_Pictures\89-610R.jpg" />
+    <Content Include="Parts_Pictures\9000-41068-0400000.jpg" />
+    <Content Include="Parts_Pictures\9007MS04S0084.jpg" />
+    <Content Include="Parts_Pictures\942 104-002.JPG" />
+    <Content Include="Parts_Pictures\94913.jpg" />
+    <Content Include="Parts_Pictures\A-Temno.JPG" />
+    <Content Include="Parts_Pictures\A20P20G.JPG" />
+    <Content Include="Parts_Pictures\ABZ800FALM.JPG" />
+    <Content Include="Parts_Pictures\ABZ800FAML2.JPG" />
+    <Content Include="Parts_Pictures\ABZ800FAW2.JPG" />
+    <Content Include="Parts_Pictures\ABZ800FMF3.JPG" />
+    <Content Include="Parts_Pictures\ABZ800FMMP44.JPG" />
+    <Content Include="Parts_Pictures\ABZ800FN3R.JPG" />
+    <Content Include="Parts_Pictures\ABZ800T-N1.JPG" />
+    <Content Include="Parts_Pictures\AC355-03U-05A6.JPG" />
+    <Content Include="Parts_Pictures\ACS355-03U-01A2-4.JPG" />
+    <Content Include="Parts_Pictures\Adapters- Eaton SWD.jpg" />
+    <Content Include="Parts_Pictures\Adapters- M12.jpg" />
+    <Content Include="Parts_Pictures\Adapters- MINIFast.jpg" />
+    <Content Include="Parts_Pictures\ADP1.JPG" />
+    <Content Include="Parts_Pictures\AI-BACKUP-ADAPTOR.JPG" />
+    <Content Include="Parts_Pictures\Assembly.jpg" />
+    <Content Include="Parts_Pictures\ATS01N209RT.jpg" />
+    <Content Include="Parts_Pictures\ATV31HU40N4.jpg" />
+    <Content Include="Parts_Pictures\BANNER RETRO SENSOR#77766- Q20PLVQ7.JPG" />
+    <Content Include="Parts_Pictures\BB-UL-18-1P-1M-57 %28WBC1F12%29.JPG" />
+    <Content Include="Parts_Pictures\BB-UL-18-1P-1M-57.JPG" />
+    <Content Include="Parts_Pictures\BEF-AH-DX100.JPG" />
+    <Content Include="Parts_Pictures\BL20-1RS232.JPG" />
+    <Content Include="Parts_Pictures\BL20-E-16DI-24VDC-P.jpg" />
+    <Content Include="Parts_Pictures\BL20-E-16DO-24VDC-.5A-P.JPG" />
+    <Content Include="Parts_Pictures\BL20-E-2CNT-2PWM.JPG" />
+    <Content Include="Parts_Pictures\BL20-E-4IOL.JPG" />
+    <Content Include="Parts_Pictures\BL20-E-8DI-24VDC-P.jpg" />
+    <Content Include="Parts_Pictures\BL20-E-8DO-24VDC-.5A-P.jpg" />
+    <Content Include="Parts_Pictures\BL20-E-GW-EN.jpg" />
+    <Content Include="Parts_Pictures\BL20-P3T-SBB.jpg" />
+    <Content Include="Parts_Pictures\BL20-PF-24VDC-D.jpg" />
+    <Content Include="Parts_Pictures\BL20-S4T-SBB.JPG" />
+    <Content Include="Parts_Pictures\BL20-SWIRE-DIL.JPG" />
+    <Content Include="Parts_Pictures\Black_PB Control Station.JPG" />
+    <Content Include="Parts_Pictures\Blue_PB Control Station.JPG" />
+    <Content Include="Parts_Pictures\Brady #101517 Arc Flash labels.JPG" />
+    <Content Include="Parts_Pictures\BS8141-P7X2-0.jpg" />
+    <Content Include="Parts_Pictures\C1WH6.JPG" />
+    <Content Include="Parts_Pictures\C3WH6.JPG" />
+    <Content Include="Parts_Pictures\Cable Glands.jpg" />
+    <Content Include="Parts_Pictures\Cable- Bulk.jpg" />
+    <Content Include="Parts_Pictures\Cables- M12 4W Gry.JPG" />
+    <Content Include="Parts_Pictures\Cables- M12 4W Power Cables.jpg" />
+    <Content Include="Parts_Pictures\Cables- M12 5W GRN for SWD.jpg" />
+    <Content Include="Parts_Pictures\Cables- M12 5W Gry for Devices.jpg" />
+    <Content Include="Parts_Pictures\Cables- M12 5W Shielded for Encoders.JPG" />
+    <Content Include="Parts_Pictures\Cables- M12 5W Yel for Estop Bus.jpg" />
+    <Content Include="Parts_Pictures\Cables- M12 8W GRN for SWD.jpg" />
+    <Content Include="Parts_Pictures\Cables- M12 8W Shielded for Encoders %282%29.jpg" />
+    <Content Include="Parts_Pictures\Cables- M12 8W Shielded for Encoders.jpg" />
+    <Content Include="Parts_Pictures\Cables- M12 Shielded Ethernet.jpg" />
+    <Content Include="Parts_Pictures\Cables- M12 Unshielded Ethernet.jpg" />
+    <Content Include="Parts_Pictures\Cables- M12 w- Flying Leads.jpg" />
+    <Content Include="Parts_Pictures\Cables- MINIFast.jpg" />
+    <Content Include="Parts_Pictures\Camera &amp; Vision Parts.jpg" />
+    <Content Include="Parts_Pictures\CCB-84901-1003-05.jpg" />
+    <Content Include="Parts_Pictures\CCB-M12X12FS-05.jpg" />
+    <Content Include="Parts_Pictures\CDM-420-0001.jpg" />
+    <Content Include="Parts_Pictures\check.png" />
+    <Content Include="Parts_Pictures\CI-KEYPAD-LCD.JPG" />
+    <Content Include="Parts_Pictures\Circuit Breakers- Accessories.jpg" />
+    <Content Include="Parts_Pictures\Circuit Breakers- Class-2.jpg" />
+    <Content Include="Parts_Pictures\Circuit Breakers- Miniature.jpg" />
+    <Content Include="Parts_Pictures\Circuit Breakers- Molded Case.jpg" />
+    <Content Include="Parts_Pictures\Circuit Breakers.jpg" />
+    <Content Include="Parts_Pictures\CJ688TGBU.JPG" />
+    <Content Include="Parts_Pictures\CJ688TGRD.JPG" />
+    <Content Include="Parts_Pictures\CLV-650-0000.jpg" />
+    <Content Include="Parts_Pictures\Connectors- M12.jpg" />
+    <Content Include="Parts_Pictures\Connectors- Solenoid.jpg" />
+    <Content Include="Parts_Pictures\Connectors.jpg" />
+    <Content Include="Parts_Pictures\Control Stations- Boxes.jpg" />
+    <Content Include="Parts_Pictures\Control Stations- Pushbuttons &amp; Lights.jpg" />
+    <Content Include="Parts_Pictures\Control Stations- Switches.jpg" />
+    <Content Include="Parts_Pictures\Control Stations.jpg" />
+    <Content Include="Parts_Pictures\CRB-09PA.JPG" />
+    <Content Include="Parts_Pictures\cross.png" />
+    <Content Include="Parts_Pictures\CRX07D6BC.JPG" />
+    <Content Include="Parts_Pictures\CT10.241.jpg" />
+    <Content Include="Parts_Pictures\CT5.241.jpg" />
+    <Content Include="Parts_Pictures\Default_package.jpg" />
+    <Content Include="Parts_Pictures\DEVICE.JPG" />
+    <Content Include="Parts_Pictures\DFS60B-S4PA10000.JPG" />
+    <Content Include="Parts_Pictures\DIL-SWD-32-002.jpg" />
+    <Content Include="Parts_Pictures\DL100-23AA2101.JPG" />
+    <Content Include="Parts_Pictures\DM100-PIVOTM-00.JPG" />
+    <Content Include="Parts_Pictures\DM300-LENS-10.jpg" />
+    <Content Include="Parts_Pictures\DM30X-HPIA-WHI-W.JPG" />
+    <Content Include="Parts_Pictures\DMR-302X-00.jpg" />
+    <Content Include="Parts_Pictures\DN-R35S1.jpg" />
+    <Content Include="Parts_Pictures\Drives- Basic VFDs.JPG" />
+    <Content Include="Parts_Pictures\Drives- Premium VFDs.jpg" />
+    <Content Include="Parts_Pictures\Drives- Soft Starts.jpg" />
+    <Content Include="Parts_Pictures\Drives.jpg" />
+    <Content Include="Parts_Pictures\DS18AP6LPQ8-79909.jpg" />
+    <Content Include="Parts_Pictures\DS18VP6RQ8.jpg" />
+    <Content Include="Parts_Pictures\DSL-3D08-G0M5AC3.JPG" />
+    <Content Include="Parts_Pictures\DX-COM-STICK.jpg" />
+    <Content Include="Parts_Pictures\E-Stop Pull-Cord Double.JPG" />
+    <Content Include="Parts_Pictures\E-Stop Pull-Cord Single.JPG" />
+    <Content Include="Parts_Pictures\E-Stop- Hardware.jpg" />
+    <Content Include="Parts_Pictures\E-Stop- Pull Cords.jpg" />
+    <Content Include="Parts_Pictures\E-Stop- Pushbuttons.jpg" />
+    <Content Include="Parts_Pictures\E-Stop_PB with Protective Cover.JPG" />
+    <Content Include="Parts_Pictures\EC2GB12.JPG" />
+    <Content Include="Parts_Pictures\EGS3030FFG.JPG" />
+    <Content Include="Parts_Pictures\EHMVD12R.jpg" />
+    <Content Include="Parts_Pictures\Enclosures.jpg" />
+    <Content Include="Parts_Pictures\Encoders.jpg" />
+    <Content Include="Parts_Pictures\ES_Reset Control Station.JPG" />
+    <Content Include="Parts_Pictures\EU1S-SWD-PF1-2.jpg" />
+    <Content Include="Parts_Pictures\EU5C-SWD-EIP-MODTCP.jpg" />
+    <Content Include="Parts_Pictures\EU5C-SWD-PF2-1.jpg" />
+    <Content Include="Parts_Pictures\EU5E-SWD-2A2A.jpg" />
+    <Content Include="Parts_Pictures\EU5E-SWD-4AX.jpg" />
+    <Content Include="Parts_Pictures\EU5E-SWD-4D2R.jpg" />
+    <Content Include="Parts_Pictures\EU5E-SWD-4D4D.jpg" />
+    <Content Include="Parts_Pictures\EU5E-SWD-8DX.jpg" />
+    <Content Include="Parts_Pictures\EU5E-SWD-X8D.jpg" />
+    <Content Include="Parts_Pictures\EU8E-SWD-16DX.jpg" />
+    <Content Include="Parts_Pictures\F1X4WH6.JPG" />
+    <Content Include="Parts_Pictures\F3X4WH6.JPG" />
+    <Content Include="Parts_Pictures\FAZ-C10-1-SP.jpg" />
+    <Content Include="Parts_Pictures\FAZ-C2-1-SP.jpg" />
+    <Content Include="Parts_Pictures\FAZ-C3-1-SP.jpg" />
+    <Content Include="Parts_Pictures\FAZ-C4-1-SP.jpg" />
+    <Content Include="Parts_Pictures\FAZ-C5-1-SP %28WMZS1C05%29.JPG" />
+    <Content Include="Parts_Pictures\FAZ-C5-1-SP.jpg" />
+    <Content Include="Parts_Pictures\FE-RR1.jpg" />
+    <Content Include="Parts_Pictures\FK 4.4-1-18.25-S613.JPG" />
+    <Content Include="Parts_Pictures\FK4.4-1-18.25-S613.JPG" />
+    <Content Include="Parts_Pictures\FKFD 4.5-0.5.jpg" />
+    <Content Include="Parts_Pictures\FRZ ATDR3 600V CC TD.jpg" />
+    <Content Include="Parts_Pictures\FSD82-12-C.jpg" />
+    <Content Include="Parts_Pictures\FSFD 4.5-0.5.jpg" />
+    <Content Include="Parts_Pictures\Fuse Holders.jpg" />
+    <Content Include="Parts_Pictures\Fuses.jpg" />
+    <Content Include="Parts_Pictures\G2x2BL6.jpg" />
+    <Content Include="Parts_Pictures\G7SA-3A1B-DC24.jpg" />
+    <Content Include="Parts_Pictures\GL6-P0111S25.JPG" />
+    <Content Include="Parts_Pictures\GMA-2-R.JPG" />
+    <Content Include="Parts_Pictures\GRE7212SP11.JPG" />
+    <Content Include="Parts_Pictures\GRE7212SP14.JPG" />
+    <Content Include="Parts_Pictures\GRE7212SP1P.JPG" />
+    <Content Include="Parts_Pictures\har09140123001.JPG" />
+    <Content Include="Parts_Pictures\har09150006102.JPG" />
+    <Content Include="Parts_Pictures\har09150006202.JPG" />
+    <Content Include="Parts_Pictures\Hardware- General.jpg" />
+    <Content Include="Parts_Pictures\Hardware- Mounting.jpg" />
+    <Content Include="Parts_Pictures\HBLDS3AC.jpg" />
+    <Content Include="Parts_Pictures\HF0516414.JPG" />
+    <Content Include="Parts_Pictures\HG0500404.JPG" />
+    <Content Include="Parts_Pictures\HOFP2CS145.JPG" />
+    <Content Include="Parts_Pictures\Hole Plugs.jpg" />
+    <Content Include="Parts_Pictures\Home-Auto-Man-Left-Right Control Station.JPG" />
+    <Content Include="Parts_Pictures\IAEBHC6.JPG" />
+    <Content Include="Parts_Pictures\IC+107.JPG" />
+    <Content Include="Parts_Pictures\IGS-801T.jpg" />
+    <Content Include="Parts_Pictures\IMRF-BP635-25.5.jpg" />
+    <Content Include="Parts_Pictures\Indicators- Horns.jpg" />
+    <Content Include="Parts_Pictures\Indicators- Panel Buttons.jpg" />
+    <Content Include="Parts_Pictures\Indicators- Panel Lights.jpg" />
+    <Content Include="Parts_Pictures\Indicators- StackLights &amp; Horns.jpg" />
+    <Content Include="Parts_Pictures\Indicators.jpg" />
+    <Content Include="Parts_Pictures\Interlock Box w- Safety Relay.JPG" />
+    <Content Include="Parts_Pictures\IVSL-5PM12-5.jpg" />
+    <Content Include="Parts_Pictures\K50APTGRYF2.jpg" />
+    <Content Include="Parts_Pictures\Key_Switch-Reset Control Station.JPG" />
+    <Content Include="Parts_Pictures\KIT.jpg" />
+    <Content Include="Parts_Pictures\Labels.jpg" />
+    <Content Include="Parts_Pictures\Laird part # 22R08A.JPG" />
+    <Content Include="Parts_Pictures\LCF08LEVMP.JPG" />
+    <Content Include="Parts_Pictures\LEC-58000.JPG" />
+    <Content Include="Parts_Pictures\LEC-59872.jpg" />
+    <Content Include="Parts_Pictures\Lighted_Blue_PB Control Station.JPG" />
+    <Content Include="Parts_Pictures\Line Reactors.JPG" />
+    <Content Include="Parts_Pictures\LMC402CBG10000.JPG" />
+    <Content Include="Parts_Pictures\LPJ-12SP.JPG" />
+    <Content Include="Parts_Pictures\MD17-73-.jpg" />
+    <Content Include="Parts_Pictures\MICROSD CARD.jpg" />
+    <Content Include="Parts_Pictures\ML100-55-103-115B %28221827%29.jpg" />
+    <Content Include="Parts_Pictures\ML100-8-1000-rt-103-115b.jpg" />
+    <Content Include="Parts_Pictures\ML17-54-73-136.jpg" />
+    <Content Include="Parts_Pictures\ML17-8-H-100-RT-73-136.jpg" />
+    <Content Include="Parts_Pictures\Motor Starters- Accessories.jpg" />
+    <Content Include="Parts_Pictures\Motor Starters- Contactors.jpg" />
+    <Content Include="Parts_Pictures\Motor Starters- Protectors.jpg" />
+    <Content Include="Parts_Pictures\Motor Starters- Reversing.jpg" />
+    <Content Include="Parts_Pictures\Motor Starters- Standard.jpg" />
+    <Content Include="Parts_Pictures\Motor Starters.jpg" />
+    <Content Include="Parts_Pictures\Mounting- Panel Brackets.jpg" />
+    <Content Include="Parts_Pictures\Mounting- Panel Stands.jpg" />
+    <Content Include="Parts_Pictures\Mounting- Universal Plates.jpg" />
+    <Content Include="Parts_Pictures\MQDC2S-1206.JPG" />
+    <Content Include="Parts_Pictures\NBB5-18GM50-E2-V1.jpg" />
+    <Content Include="Parts_Pictures\NECTAB17- 2017 Tabs.JPG" />
+    <Content Include="Parts_Pictures\Network Switches.jpg" />
+    <Content Include="Parts_Pictures\no image.jpg" />
+    <Content Include="Parts_Pictures\OBR7500-R100-2EP-IO-0.3M-V1%28267075-100002%29.jpg" />
+    <Content Include="Parts_Pictures\OMH-ML100-03.jpg" />
+    <Content Include="Parts_Pictures\OMH-ML17-EZ %28909149%29.jpg" />
+    <Content Include="Parts_Pictures\Other.jpg" />
+    <Content Include="Parts_Pictures\P2CS148.JPG" />
+    <Content Include="Parts_Pictures\P7SA-10F.jpg" />
+    <Content Include="Parts_Pictures\Part #20-750-1132C-2R.JPG" />
+    <Content Include="Parts_Pictures\Part #PANIAEBHC6.JPG" />
+    <Content Include="Parts_Pictures\PCG-3-4R.jpg" />
+    <Content Include="Parts_Pictures\PCG-M20RL.JPG" />
+    <Content Include="Parts_Pictures\PCM 100-75 G.JPG" />
+    <Content Include="Parts_Pictures\PG13.5-2X5.jpg" />
+    <Content Include="Parts_Pictures\PG21-0X0.jpg" />
+    <Content Include="Parts_Pictures\PGT-10-PRO.JPG" />
+    <Content Include="Parts_Pictures\PK010R-P14-2UP8X-V1141.jpg" />
+    <Content Include="Parts_Pictures\PK12GTA.jpg" />
+    <Content Include="Parts_Pictures\PLC- COMM CARDs.jpg" />
+    <Content Include="Parts_Pictures\PLC- CPUs.jpg" />
+    <Content Include="Parts_Pictures\PLC- IO CARDs.jpg" />
+    <Content Include="Parts_Pictures\PLC- Power Supplies.jpg" />
+    <Content Include="Parts_Pictures\PLC- Racks.jpg" />
+    <Content Include="Parts_Pictures\PLCs.jpg" />
+    <Content Include="Parts_Pictures\PLD-57.jpg" />
+    <Content Include="Parts_Pictures\PLX31-EIP-PND.JPG" />
+    <Content Include="Parts_Pictures\PN5204.jpg" />
+    <Content Include="Parts_Pictures\Power Supplies.jpg" />
+    <Content Include="Parts_Pictures\PR2-NM.JPG" />
+    <Content Include="Parts_Pictures\PS5266-X.JPG" />
+    <Content Include="Parts_Pictures\PV-10-14R-D.jpg" />
+    <Content Include="Parts_Pictures\QT40.241.jpg" />
+    <Content Include="Parts_Pictures\R6010.jpg" />
+    <Content Include="Parts_Pictures\RACO 660.JPG" />
+    <Content Include="Parts_Pictures\RACO 862.JPG" />
+    <Content Include="Parts_Pictures\REF-H33 %28232251%29.jpg" />
+    <Content Include="Parts_Pictures\Relays.jpg" />
+    <Content Include="Parts_Pictures\Reset-Auto-Man-Jog Control Station.JPG" />
+    <Content Include="Parts_Pictures\RH-P240AJ-8-30 MW1-UB1-50.jpg" />
+    <Content Include="Parts_Pictures\RIO Junction Boxes- M12.jpg" />
+    <Content Include="Parts_Pictures\RIO Module-IP20- Eaton SWD.jpg" />
+    <Content Include="Parts_Pictures\RIO Module-IP20- Turck.jpg" />
+    <Content Include="Parts_Pictures\RIO Module-IP20.jpg" />
+    <Content Include="Parts_Pictures\RIO Module-IP67- Eaton SWD.jpg" />
+    <Content Include="Parts_Pictures\RIO Module-IP67.jpg" />
+    <Content Include="Parts_Pictures\RJ1S-CL-A120.jpg" />
+    <Content Include="Parts_Pictures\RJ1S-CL-D24.jpg" />
+    <Content Include="Parts_Pictures\RK 4.43T-2.JPG" />
+    <Content Include="Parts_Pictures\RK 4.5T-2-RS 4.5T.jpg" />
+    <Content Include="Parts_Pictures\RL-01203 7.5 HP.jpg" />
+    <Content Include="Parts_Pictures\RL-01203.JPG" />
+    <Content Include="Parts_Pictures\RSM2RKM50.jpg" />
+    <Content Include="Parts_Pictures\RSSDRKSD441-2M.jpg" />
+    <Content Include="Parts_Pictures\S075x100VATY.JPG" />
+    <Content Include="Parts_Pictures\S100X150VATY.JPG" />
+    <Content Include="Parts_Pictures\S20N11S05N.JPG" />
+    <Content Include="Parts_Pictures\S20N11S15N.JPG" />
+    <Content Include="Parts_Pictures\SC 6SE64202UD137AA1.JPG" />
+    <Content Include="Parts_Pictures\SCE-48EL3612LPPL.JPG" />
+    <Content Include="Parts_Pictures\SCE-LF18.JPG" />
+    <Content Include="Parts_Pictures\SCE-N12FA44.JPG" />
+    <Content Include="Parts_Pictures\SCE-N12FGA44.JPG" />
+    <Content Include="Parts_Pictures\SCE-TEMNO.JPG" />
+    <Content Include="Parts_Pictures\SCH1021.JPG" />
+    <Content Include="Parts_Pictures\SE-44X-E524.jpg" />
+    <Content Include="Parts_Pictures\SE20-84X-RJ522.jpg" />
+    <Content Include="Parts_Pictures\SE20-84X-RJ822.jpg" />
+    <Content Include="Parts_Pictures\Sensors- Inductive.jpg" />
+    <Content Include="Parts_Pictures\Sensors- Limit Switches.jpg" />
+    <Content Include="Parts_Pictures\Sensors- Photo Eyes.jpg" />
+    <Content Include="Parts_Pictures\Sensors- Pressure.jpg" />
+    <Content Include="Parts_Pictures\Sensors- Proximity.jpg" />
+    <Content Include="Parts_Pictures\Sensors- Temperature.jpg" />
+    <Content Include="Parts_Pictures\Sensors- Ultrasonic.jpg" />
+    <Content Include="Parts_Pictures\Sensors.jpg" />
+    <Content Include="Parts_Pictures\SF0516414.JPG" />
+    <Content Include="Parts_Pictures\SH2B-05.JPG" />
+    <Content Include="Parts_Pictures\SI-ETHERNET.JPG" />
+    <Content Include="Parts_Pictures\SJ1S-07L.jpg" />
+    <Content Include="Parts_Pictures\SL7-CB-T-100.JPG" />
+    <Content Include="Parts_Pictures\SL7-L24-A.JPG" />
+    <Content Include="Parts_Pictures\SL7-L24-B.JPG" />
+    <Content Include="Parts_Pictures\SL7-L24-R.JPG" />
+    <Content Include="Parts_Pictures\SL7-L24-Y.JPG" />
+    <Content Include="Parts_Pictures\SLX-5ES-1.JPG" />
+    <Content Include="Parts_Pictures\SLX-5MS.JPG" />
+    <Content Include="Parts_Pictures\SM30SRLQD.JPG" />
+    <Content Include="Parts_Pictures\SMA30SELQD.JPG" />
+    <Content Include="Parts_Pictures\SPAU-P10R-W-G18FD-L-PNLK-PNVBA-M8-U.JPG" />
+    <Content Include="Parts_Pictures\SPD24601.JPG" />
+    <Content Include="Parts_Pictures\Spider 5TX.JPG" />
+    <Content Include="Parts_Pictures\Stack-Light Base.JPG" />
+    <Content Include="Parts_Pictures\Start-Stop Control Station.JPG" />
+    <Content Include="Parts_Pictures\Start-Stop-Auto-Man Control Station.JPG" />
+    <Content Include="Parts_Pictures\Start-Stop-Blue_PB Control Station.JPG" />
+    <Content Include="Parts_Pictures\Start-Stop-ES_Reset Control Station.JPG" />
+    <Content Include="Parts_Pictures\SUA925QD.jpg" />
+    <Content Include="Parts_Pictures\SWD4-2LR5-2S.jpg" />
+    <Content Include="Parts_Pictures\SWD4-3LF8-24-2S.jpg" />
+    <Content Include="Parts_Pictures\SWD4-8FRF-10.jpg" />
+    <Content Include="Parts_Pictures\SWD4-8MF2.jpg" />
+    <Content Include="Parts_Pictures\SWD4-8SF2-5.jpg" />
+    <Content Include="Parts_Pictures\SWD4-8SFF2-5.jpg" />
+    <Content Include="Parts_Pictures\SWD4-RC5-10.jpg" />
+    <Content Include="Parts_Pictures\SWD4-RC8-10.jpg" />
+    <Content Include="Parts_Pictures\SWD4-SFL8-12.jpg" />
+    <Content Include="Parts_Pictures\SWD4-SML8-12.jpg" />
+    <Content Include="Parts_Pictures\Switches- Motor Disconnects.jpg" />
+    <Content Include="Parts_Pictures\Switches- Panel.jpg" />
+    <Content Include="Parts_Pictures\Switches.jpg" />
+    <Content Include="Parts_Pictures\Terminal Blocks- Din Rail Anchors.jpg" />
+    <Content Include="Parts_Pictures\Terminal Blocks- End Barriers.jpg" />
+    <Content Include="Parts_Pictures\Terminal Blocks- Jumpers.jpg" />
+    <Content Include="Parts_Pictures\Terminal Blocks- Markers.JPG" />
+    <Content Include="Parts_Pictures\Terminal Blocks- Push in Type.jpg" />
+    <Content Include="Parts_Pictures\Terminal Blocks- Screw Type.jpg" />
+    <Content Include="Parts_Pictures\Terminal Blocks- Spring Cage Type.jpg" />
+    <Content Include="Parts_Pictures\Terminal Blocks.jpg" />
+    <Content Include="Parts_Pictures\THI58N-1BAK0R6TN-01024.jpg" />
+    <Content Include="Parts_Pictures\TM-CPL-JN3.JPG" />
+    <Content Include="Parts_Pictures\TM5ACBM11.JPG" />
+    <Content Include="Parts_Pictures\TM5ACBM12.JPG" />
+    <Content Include="Parts_Pictures\TM5ACBM3FS.JPG" />
+    <Content Include="Parts_Pictures\TM5ACBN1.JPG" />
+    <Content Include="Parts_Pictures\TM5ACSLCM8FS.JPG" />
+    <Content Include="Parts_Pictures\TM5ACTB12PS.JPG" />
+    <Content Include="Parts_Pictures\TM5ACTB32.JPG" />
+    <Content Include="Parts_Pictures\TM5ACTB52FS.JPG" />
+    <Content Include="Parts_Pictures\TM5CSLC200FS.JPG" />
+    <Content Include="Parts_Pictures\TM5NS31.JPG" />
+    <Content Include="Parts_Pictures\TM5SD04TFS.JPG" />
+    <Content Include="Parts_Pictures\TM5SDI16D.JPG" />
+    <Content Include="Parts_Pictures\TM5SDI4DFS.JPG" />
+    <Content Include="Parts_Pictures\TM5SDI6U.JPG" />
+    <Content Include="Parts_Pictures\TM5SPS2.JPG" />
+    <Content Include="Parts_Pictures\TM5SPS3.JPG" />
+    <Content Include="Parts_Pictures\Transformers.jpg" />
+    <Content Include="Parts_Pictures\UB10.242.jpg" />
+    <Content Include="Parts_Pictures\UCT-TM10 0829142.JPG" />
+    <Content Include="Parts_Pictures\UCT-TM6 0828736.JPG" />
+    <Content Include="Parts_Pictures\UK10.3-HESILED N 690 2POL %283048506%29.jpg" />
+    <Content Include="Parts_Pictures\UK10.3-HESILED N 690 3POL %283048519%29.jpg" />
+    <Content Include="Parts_Pictures\UK10.3-HESILED N 690 3POL 3048519.jpg" />
+    <Content Include="Parts_Pictures\UT 35-PE 3044241.jpg" />
+    <Content Include="Parts_Pictures\UT 4-PE 3044128.jpg" />
+    <Content Include="Parts_Pictures\V1-G-2M-PVC-V1-G.JPG" />
+    <Content Include="Parts_Pictures\V15S-T-V15.jpg" />
+    <Content Include="Parts_Pictures\VAZ-CLAMP-70MM.jpg" />
+    <Content Include="Parts_Pictures\VAZ-Horn-70mm-100dba-8tone.jpg" />
+    <Content Include="Parts_Pictures\VAZ-HORN-70MM-85DBA.jpg" />
+    <Content Include="Parts_Pictures\VAZ-LED-70MM-BU.jpg" />
+    <Content Include="Parts_Pictures\VAZ-LED-70MM-RD.jpg" />
+    <Content Include="Parts_Pictures\VAZ-LED-70MM-YE.jpg" />
+    <Content Include="Parts_Pictures\VAZ-MH-1-2%27Conduit-70MM.jpg" />
+    <Content Include="Parts_Pictures\VE202G1A.JPG" />
+    <Content Include="Parts_Pictures\VW3A1113.JPG" />
+    <Content Include="Parts_Pictures\Wire- Accessories.jpg" />
+    <Content Include="Parts_Pictures\Wire.jpg" />
+    <Content Include="Parts_Pictures\wiremtw12red500.JPG" />
+    <Content Include="Parts_Pictures\WIREMTW14BLU-WHT500.JPG" />
+    <Content Include="Parts_Pictures\WIREMTW14BLU500.JPG" />
+    <Content Include="Parts_Pictures\wiremtw14red500.JPG" />
+    <Content Include="Parts_Pictures\WIREMTW14WHT500.JPG" />
+    <Content Include="Parts_Pictures\WIREMTW16YEL500.JPG" />
+    <Content Include="Parts_Pictures\WL-160-F440.JPG" />
+    <Content Include="Parts_Pictures\WSM WKM 46-0.5M.JPG" />
+    <Content Include="Parts_Pictures\XTCE007B10TD.jpg" />
+    <Content Include="Parts_Pictures\XTCE012B10TD.jpg" />
+    <Content Include="Parts_Pictures\XTPAXCLKA2.jpg" />
+    <Content Include="Parts_Pictures\XTPAXCLKA3.jpg" />
+    <Content Include="Parts_Pictures\XTPAXCLKA4.jpg" />
+    <Content Include="Parts_Pictures\XTPAXCLKA5.jpg" />
+    <Content Include="Parts_Pictures\XTPAXLSA.jpg" />
+    <Content Include="Parts_Pictures\XTPR004BC1.jpg" />
+    <Content Include="Parts_Pictures\XTPR010BC1.jpg" />
+    <Content Include="Parts_Pictures\XTSC001BBTD.jpg" />
+    <Content Include="Parts_Pictures\XTSC004BBTD.jpg" />
+    <Content Include="Parts_Pictures\XTSC010BBTD.jpg" />
+    <Content Include="Parts_Pictures\XTSC012BBTD.jpg" />
+    <Content Include="Parts_Pictures\XTSC016BBTD.jpg" />
+    <Content Include="Parts_Pictures\XTSC1P6BBTD.jpg" />
+    <Content Include="Parts_Pictures\XTSC6P3BBTD.jpg" />
+    <Content Include="Parts_Pictures\XTSCP40BBTD.jpg" />
+    <Content Include="Parts_Pictures\XTSRP16BBTD.jpg" />
+    <Content Include="Parts_Pictures\XUM9APCNL03M12.jpg" />
+    <Content Include="Parts_Pictures\XY2CEDA196H7.JPG" />
+    <Content Include="Parts_Pictures\Y066425-6033.jpg" />
+    <Content Include="Parts_Pictures\Y066426-6033.jpg" />
+    <Content Include="Parts_Pictures\ZB4BZ64.JPG" />
+    <Content Include="Parts_Pictures\ZS80-20-2S WVD.jpg" />
+    <Content Include="Part_type.aspx" />
+    <Content Include="Style.css" />
+    <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BOM.aspx.cs">
+      <DependentUpon>BOM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BOM.aspx.designer.cs">
+      <DependentUpon>BOM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory.aspx.cs">
+      <DependentUpon>Inventory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inventory.aspx.designer.cs">
+      <DependentUpon>Inventory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Part_type.aspx.cs">
+      <DependentUpon>Part_type.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Part_type.aspx.designer.cs">
+      <DependentUpon>Part_type.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Site1.Master" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57281</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:57281/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

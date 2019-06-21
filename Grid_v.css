@@ -1,0 +1,119 @@
+﻿.GridView2 {
+    border: solid 2px black;
+    min-width: 80%;
+    background-color: #5f75bd;
+    }
+
+.GridView2 header {
+    background-color: #646464;
+    font-family: Arial;
+    color: White;
+    border: none 0px transparent;
+    height: 25px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.Gridview2 rows {
+    background-color: #5f75bd;
+    font-family: Arial;
+    font-size: 14px;
+    color: #000;
+    min-height: 25px;
+    text-align: left;
+    border: none 0px transparent;
+}
+
+.Gridview2 rows:hover {
+    background-color: #ff8000;
+    font-family: Arial;
+    color: #fff;
+    text-align: left;
+}
+
+.Gridview2 AltRow {
+    background-color: #0094ff;
+    font-family: Arial;
+    font-size: 14px;
+    color: #000;
+    min-height: 25px;
+    text-align: left;
+    border: none 0px transparent;
+}
+
+.Gridview2 selectedrow {
+    background-color: #ff8000;
+    font-family: Arial;
+    color: #fff;
+    font-weight: bold;
+    text-align: left;
+}
+
+.GridView2 a /** FOR THE PAGING ICONS  **/ {
+    background-color: Transparent;
+    padding: 5px 5px 5px 5px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+    .GridView2 a:hover /** FOR THE PAGING ICONS  HOVER STYLES**/ {
+        background-color: #000;
+        color: #fff;
+    }
+
+.GridView2 span /** FOR THE PAGING ICONS CURRENT PAGE INDICATOR **/ {
+    background-color: #c9c9c9;
+    color: #000;
+    padding: 5px 5px 5px 5px;
+}
+
+.pager {
+    background-color: #646464;
+    font-family: Arial;
+    color: White;
+    height: 30px;
+    text-align: left;
+}
+
+.GridView2 td {
+    padding: 5px;
+    /*background-color: #c9c9c9;*/ /*#fff*/
+    font-family: Arial;
+    font-size: 14px;
+    color: #000;
+    min-height: 25px;
+    text-align: center;
+    border: none 0px transparent;
+}
+
+.GridView2 th {
+    padding: 5px;
+    background-color: #646464;
+    font-family: Arial;
+    color: White;
+    border: none 0px transparent;
+    height: 25px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.GridView2 tr:nth-child(even) {
+    background-color: #ffffff;
+    font-family: Arial;
+    font-size: 14px;
+    color: #000;
+    min-height: 25px;
+    text-align: center;
+    border: none 0px transparent;
+}
+
+.GridView2 tr:nth-child(odd) {
+    background-color: #c9c9c9;
+    font-family: Arial;
+    font-size: 14px;
+    color: #000;
+    min-height: 25px;
+    text-align: center;
+    border: none 0px transparent;
+}
